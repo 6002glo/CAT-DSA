@@ -14,6 +14,6 @@ public class Main {
         }
 
         // Print the total sum
-        System.out.println("The sum of numbers from 1 to 5 is: " + sum);
+        System.out.println("The sum of numbers from 1
     }
 }
