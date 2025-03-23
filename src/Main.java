@@ -1,19 +1,76 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        // Print a welcome message
-        System.out.printf("Hello and welcome!\n");
+// Class for Singly Linked List
+class SinglyLinkedList {
+    // Node class
+    class Node {
+        int data;
+        Node next;
 
-        int sum = 0; // Initialize a variable to hold the sum
-
-        // Loop from 1 to 5
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-            sum += i; // Add the current value of i to sum
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
         }
+    }
 
-        // Print the total sum
-        System.out.println("The sum of numbers from 1
+    private Node head; // Head of the linked list
+
+    // Insert a node at the beginning
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    // Insert a node at the end
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
+    // Delete a node from the beginning
+    public void deleteFromBeginning() {
+        if (head == null) {
+            System.out.println("List is empty, nothing to delete.");
+            return;
+        }
+        head = head.next;
+    }
+
+    // Display the linked list
+    public void display() {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("NULL");
+    }
+
+    // Main method to test the operations
+    public static void main(String[] args) {
+        SinglyLinkedList list = new SinglyLinkedList();
+
+        list.insertAtBeginning(10);
+        list.insertAtBeginning(20);
+        list.insertAtEnd(30);
+        list.insertAtEnd(40);
+
+        System.out.println("Linked List after insertions:");
+        list.display();
+
+        list.deleteFromBeginning();
+        System.out.println("Linked List after deleting from beginning:");
+        list.display();
     }
 }
