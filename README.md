@@ -38,21 +38,6 @@ Big O notation typically describes the worst-case scenario.
 * Nested loops also result in cumulative complexities. 
     * Example: A code snippet with nested loops, each iterating 'n' times, has a time complexity of O(n²).
  
-     ## 2. Arrays and Linked Lists
- 
- ### Memory Allocation
- 
- * **Arrays:** Elements are stored in contiguous memory locations. [cite: 14]
- * **Linked Lists:** Elements are stored in non-contiguous memory locations using dynamic memory allocation. [cite: 14]
- 
- ### Performance
- 
- * **Arrays:** Provide faster access to elements by index (O(1)). [cite: 15]
- * **Linked Lists:** Accessing elements requires traversal, resulting in O(n) access time. [cite: 15]
- 
- ### Insertion
- 
- * **Arrays:** Insertion in the middle is time-consuming (O(n)). [cite: 16]
- * **Linked Lists:** Insertion at the front is fast (O(1)) if the node pointer is available. [cite: 16]
+   
 
 
